@@ -5,7 +5,11 @@ parameters:
     type: string
     default: a template parameter
 
+
 stages:
+  - template: asuperTemplate.yml
+    parameters:
+      superParam: this is a superParam
   - stage: TemplateStage1
     displayName: TemplateStage 1
     jobs:
