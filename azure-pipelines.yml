@@ -1,8 +1,8 @@
 stages:
   - stage: Stage 1
-  jobs
-  - job: Job 1
-    steps
-    - bash: |
-        echo hello world
-      displayName: A bash script
+    jobs:
+    - job: Job 1
+      steps
+      - bash: |
+          echo hello world
+        displayName: A bash script
