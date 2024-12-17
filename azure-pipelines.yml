@@ -16,9 +16,11 @@ stages:
     - job: Job1
       displayName: Job 1
       steps:
-      - task: Bash@3
+      - task: AWSShellScript@01
         inputs:
-          script: |
+          awsCredentials: "placeholder"
+          scriptType:"inline"
+          inlineScript: |
             testValue=$(Pipeline.Parameters.initialValue)
             echo hello world $(testValue)
         displayName: A bash script
