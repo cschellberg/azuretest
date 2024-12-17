@@ -1,0 +1,20 @@
+parameters
+  - name: templateParam
+    displayName:  Template Parameter
+    type: string
+    default: a template parameter
+stages:
+  - stage: TemplateStage1
+    displayName: TemplateStage 1
+    jobs:
+    - job: TemplateJob1
+      displayName: Template Job 1
+      steps:
+      - task: Bash@3 
+        inputs:
+          targetType: "inline"
+          script: |
+            myValue=`echo ${{ parameters.initialValue }}`
+            echo "my value is $myValue"
+        displayName: Template Bash script 1
+        name: TemplateScript11  
