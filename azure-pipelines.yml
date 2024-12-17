@@ -20,5 +20,5 @@ stages:
         inputs:
           targetType: "inline"
           script: |
-            env
+            echo hello world
         displayName: A bash script
