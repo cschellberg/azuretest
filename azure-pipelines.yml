@@ -9,6 +9,11 @@ parameters:
     default: A value
     displayName: initial vlaue
 
+extends: 
+  template: asuperTemplate.yml
+  parameters:
+    superParam: this is a superParam
+
 stages:
   - stage: Stage1
     displayName: Stage 1
@@ -51,4 +56,4 @@ stages:
           script: |
             echo "my value is $(myStageVar)"
           displayName: Bash script 2
-  - template: atemplate.yml
+
