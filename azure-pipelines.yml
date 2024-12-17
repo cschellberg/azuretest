@@ -16,8 +16,7 @@ stages:
     - job: Job1
       displayName: Job 1
       steps:
-      - task: bash
-        targetType: 'inline'
+      - task: Bash@3
         script: |
           testValue=$(Pipeline.Parameters.initialValue)
           echo hello world $(testValue)
