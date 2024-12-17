@@ -17,6 +17,6 @@ stages:
       displayName: Job 1
       steps:
       - script: |
-          testValue=${{ parameters.initialValue }}
+          testValue=$(Pipeline.Parameters.initialValue)
           echo hello world $(testValue)
         displayName: A bash script
