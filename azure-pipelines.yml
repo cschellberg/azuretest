@@ -3,6 +3,12 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+parameters:
+  -name: initialValue
+   type: string
+   displayName: Initial Value
+   default: A value
+
 stages:
   - stage: Stage1
     displayName: Stage 1
@@ -11,5 +17,5 @@ stages:
       displayName: Job 1
       steps:
       - script: |
-          echo hello world
+          echo hello world $(initialValue)
         displayName: A bash script
