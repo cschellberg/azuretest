@@ -17,5 +17,5 @@ stages:
       displayName: Job 1
       steps:
       - script: |
-          echo hello world $(initialValue)
+          echo hello world $(parameters.initialValue)
         displayName: A bash script
