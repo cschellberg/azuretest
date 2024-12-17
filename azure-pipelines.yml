@@ -20,5 +20,5 @@ stages:
         inputs:
           targetType: "inline"
           script: |
-            echo hello world
+            echo hello world ${{ parameters.initialValue }}
         displayName: A bash script
