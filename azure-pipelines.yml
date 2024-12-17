@@ -20,6 +20,5 @@ stages:
         inputs:
           targetType: "inline"
           script: |
-          #  testValue=$(Pipeline.Parameters.initialValue)
-            echo hello world $(testValue)
+            echo hello world
         displayName: A bash script
