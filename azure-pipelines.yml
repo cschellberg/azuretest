@@ -7,7 +7,7 @@ stages:
   - stage: Stage 1
     jobs:
     - job: Job 1
-      steps
+      steps:
       - script: |
           echo hello world
         displayName: A bash script
