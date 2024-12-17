@@ -6,7 +6,6 @@ pool:
 parameters:
   -name: initialValue
    type: string
-   displayName: Initial Value
    default: A value
 
 stages:
