@@ -3,11 +3,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-
 parameters:
-  -name: initialValue
-   type: string
-   default: A value
+  - name: initialValue
+    type: string
+    default: A value
+    displayName: initial vlaue
 
 stages:
   - stage: Stage1
