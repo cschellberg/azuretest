@@ -9,5 +9,5 @@ stages:
     - job: Job 1
       steps
       - bash: |
-          echo hello world
+        echo hello world
         displayName: A bash script
