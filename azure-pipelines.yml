@@ -51,4 +51,4 @@ stages:
           script: |
             echo "my value is $(myStageVar)"
           displayName: Bash script 2
-   - template: atemplate.yml
+  - template: atemplate.yml
