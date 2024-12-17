@@ -9,12 +9,8 @@ parameters:
     default: A value
     displayName: initial vlaue
 
-extends: 
-  template: asuperTemplate.yml
-  parameters:
-    superParam: this is a superParam
-
 stages:
+  - template: atemplate.yml
   - stage: Stage1
     displayName: Stage 1
     jobs:
