@@ -19,5 +19,6 @@ stages:
       - task: Bash@3
         inputs:
           targetType: "inline"
-          script: env
+          script: |
+            env
         displayName: A bash script
