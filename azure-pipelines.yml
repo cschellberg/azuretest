@@ -21,4 +21,5 @@ stages:
           targetType: "inline"
           script: |
             myValue=`echo ${{ parameters.initialValue }}`
+            echo "my value is $myValue"
         displayName: A bash script
