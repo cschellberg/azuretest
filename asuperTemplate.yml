@@ -1,0 +1,19 @@
+parameters:
+  - name: superParam
+    displayName:  Super Template Parameter
+    type: string
+stages:
+  - stage: SuperTemplateStage1
+    displayName: SuperTemplateStage 1
+    jobs:
+    - job: SuperTemplateJob1
+      displayName: Super Template Job 1
+      steps:
+      - task: Bash@3 
+        inputs:
+          targetType: "inline"
+          script: |
+            myValue=`echo ${{ parameters.superParam }}`
+            echo "my value is $myValue"
+        displayName: Super Template Bash script 1
+        name: SuperTemplateScript11  

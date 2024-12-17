@@ -1,8 +1,10 @@
+
 parameters:
   - name: templateParam
     displayName:  Template Parameter
     type: string
     default: a template parameter
+
 stages:
   - stage: TemplateStage1
     displayName: TemplateStage 1
