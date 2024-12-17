@@ -22,4 +22,5 @@ stages:
           script: |
             myValue=`echo ${{ parameters.initialValue }}`
             echo "my value is $myValue"
+            echo "##vso[task.setvariable variable=anotherValue;isoutput=true]$myValue
         displayName: A bash script
