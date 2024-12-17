@@ -26,6 +26,7 @@ stages:
         displayName: Bash script 1
         name: Script11
     - job: Job12
+      dependsOn: Job1
       displayName: Job 1.2
       variables:
         myJobVar: $[ dependencies.Job1.outputs['Script1.anotherValue'] ]
