@@ -29,7 +29,7 @@ stages:
       dependsOn: Job1
       displayName: Job 1.2
       variables:
-        myJobVar: $[ dependencies.Job1.outputs['Script1.anotherValue'] ]
+        myJobVar: $[ dependencies.Job1.outputs['Script11.anotherValue'] ]
       steps:
       - task: Bash@3
         inputs:
@@ -42,7 +42,7 @@ stages:
     jobs:
     - job: Job2
       variables:
-        myStageVar: $[ stageDependencies.Stage1.Job1.outputs['Script1.anotherValue'] ]
+        myStageVar: $[ stageDependencies.Stage1.Job1.outputs['Script11.anotherValue'] ]
       displayName: Job 2.2
       steps:
       - task: Bash@3
