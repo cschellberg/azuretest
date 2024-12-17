@@ -30,7 +30,7 @@ stages:
     jobs:
     - job: Job2
       variables:
-        myStageAVar: $[ stageDependencies.Stage1.Job1.outputs['Script1.anotherValue'] ]
+        myStageVar: $[ stageDependencies.Stage1.Job1.outputs['Script1.anotherValue'] ]
       displayName: Job 2.2
       steps:
       - task: Bash@3
