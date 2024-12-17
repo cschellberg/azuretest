@@ -1,4 +1,4 @@
-parameters
+parameters:
   - name: templateParam
     displayName:  Template Parameter
     type: string
@@ -14,7 +14,7 @@ stages:
         inputs:
           targetType: "inline"
           script: |
-            myValue=`echo ${{ parameters.initialValue }}`
+            myValue=`echo ${{ parameters.templateParam }}`
             echo "my value is $myValue"
         displayName: Template Bash script 1
         name: TemplateScript11  
