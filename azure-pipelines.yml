@@ -17,5 +17,6 @@ stages:
       displayName: Job 1
       steps:
       - script: |
-          echo hello world ${{ parameters.initialValue }}
+          testValue=${{ parameters.initialValue }}
+          echo hello world $(testValue)
         displayName: A bash script
