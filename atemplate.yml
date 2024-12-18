@@ -3,7 +3,9 @@ parameters:
     displayName: Template Parameter
     type: string
     default: a template parameter
-
+  - name: templateParam2
+    displayName: Template Parameter
+    type: string
 
 stages:
   - template: asuperTemplate.yml
