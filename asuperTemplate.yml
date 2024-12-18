@@ -14,6 +14,6 @@ stages:
               targetType: "inline"
               script: |
                 myValue=`echo ${{ parameters.superParam }}`
-                echo "my value is $myValue"
+                echo "Value is a parameter passed in to the template from child template $myValue"
             displayName: Super Template Bash script 1
             name: SuperTemplateScript11
