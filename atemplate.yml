@@ -22,7 +22,7 @@ stages:
               targetType: "inline"
               script: |
                 myValue=`echo ${{ parameters.templateParam }}`
-                echo "my value 1 is $myValue"
+                echo "my value 1(set from stage dependencies) is $myValue"
                 myValue=`echo ${{ parameters.templateParam2 }}`
                 echo "my value 2 is $myValue"
             displayName: Template Bash script 1
