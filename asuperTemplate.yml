@@ -7,6 +7,8 @@ stages:
     displayName: SuperTemplateStage 1
     jobs:
       - job: SuperTemplateJob1
+        variables:
+          myStageVar: $[ stageDependencies.Stage1.Job1.outputs['Script11.anotherValue'] ]
         displayName: Super Template Job 1
         steps:
           - task: Bash@3
@@ -15,5 +17,12 @@ stages:
               script: |
                 myValue=`echo ${{ parameters.superParam }}`
                 echo "Value is a parameter passed in to the template from child template $myValue"
-            displayName: Super Template Bash script 1
-            name: SuperTemplateScript11
+            displayName: Super Template Bash script to output parameters
+            name: SuperTemplateScript1
+          - task: Bash@3
+            inputs:
+              targetType: "inline"
+              script: |
+                echo "this is a value that comes from a previous stage $(myStageVar)"
+            displayName: Super Template Bash script to output stage variables of a calling template
+            name: SuperTemplateScript12

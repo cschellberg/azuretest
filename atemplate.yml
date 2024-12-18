@@ -25,5 +25,5 @@ stages:
                 echo "my value 1(set from stage dependencies) does not appear because templates are expanded first before stages are run $myValue"
                 myValue=`echo ${{ parameters.templateParam2 }}`
                 echo "my value 2(is a parameter that is hard coded) is $myValue"
-            displayName: Template Bash script 1
+            displayName: Template Bash script to output parameters
             name: TemplateScript11
