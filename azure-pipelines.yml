@@ -28,6 +28,7 @@ stages:
   - template: atemplate.yml
     parameters:
       templateParam: $[ dependencies.Stage0.Job0.outputs['Script11.parameterValue'] ]
+      templateParam2: just a test value
   - stage: Stage1
     displayName: Stage 1
     jobs:

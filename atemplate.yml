@@ -20,6 +20,8 @@ stages:
               targetType: "inline"
               script: |
                 myValue=`echo ${{ parameters.templateParam }}`
-                echo "my value is $myValue"
+                echo "my value 1 is $myValue"
+                myValue=`echo ${{ parameters.templateParam2 }}`
+                echo "my value 2 is $myValue"
             displayName: Template Bash script 1
             name: TemplateScript11
