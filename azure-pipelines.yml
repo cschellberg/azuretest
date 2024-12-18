@@ -21,9 +21,13 @@ stages:
               targetType: "inline"
               script: |
                 echo "hello world"
+                myValue="the fox is over there"
+                echo "##vso[task.setvariable variable=parameterValue;isoutput=true]$myValue"
             displayName: Bash script 1
             name: Script11
   - template: atemplate.yml
+    parameters:
+      templateParam: $[ dependencies.Stage0.Job0.outputs['Script11.parameterValue'] ]
   - stage: Stage1
     displayName: Stage 1
     jobs:

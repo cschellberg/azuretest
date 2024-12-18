@@ -16,4 +16,4 @@ stages:
                 myValue=`echo ${{ parameters.superParam }}`
                 echo "my value is $myValue"
             displayName: Super Template Bash script 1
-            name: SuperTemplateScript11  
+            name: SuperTemplateScript11
