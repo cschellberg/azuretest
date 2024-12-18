@@ -4,6 +4,7 @@ parameters:
     type: string
 stages:
   - stage: SuperTemplateStage1
+    dependsOn: Stage1
     displayName: SuperTemplateStage 1
     jobs:
       - job: SuperTemplateJob1
