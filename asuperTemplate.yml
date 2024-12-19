@@ -11,6 +11,7 @@ stages:
           myStageVar: $[ stageDependencies.Stage1.Job1.outputs['Script11.anotherValue'] ]
         displayName: Super Template Job 1
         steps:
+          - checkout: none
           - task: Bash@3
             inputs:
               targetType: "inline"

@@ -16,6 +16,7 @@ stages:
       - job: Job0
         displayName: Job 0.1
         steps:
+          - checkout: none
           - task: Bash@3
             inputs:
               targetType: "inline"
@@ -53,6 +54,7 @@ stages:
           myJobVar1: $[ dependencies.Job1.outputs['Script11.anotherValue'] ]
           myJobVar2: $[ stageDependencies.Stage0.Job0.outputs['Script00.anotherValue'] ]
         steps:
+          - checkout: none
           - task: Bash@3
             inputs:
               targetType: "inline"
@@ -68,6 +70,7 @@ stages:
           myStageVar: $[ stageDependencies.Stage1.Job1.outputs['Script11.anotherValue'] ]
         displayName: Job 2.2
         steps:
+          - checkout: none
           - task: Bash@3
             inputs:
               targetType: "inline"
