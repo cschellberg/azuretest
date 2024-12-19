@@ -36,6 +36,7 @@ stages:
       - job: Job1
         displayName: Job 1.1
         steps:
+          - checkout: none
           - task: Bash@3
             inputs:
               targetType: "inline"
